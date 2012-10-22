@@ -69,8 +69,8 @@ int main(int argc, const char **argv)
 
   char *x;
   const size_t cache_line_size = 64;
-  const size_t array_size = 10000000;
-  size_t ntrips = 5;
+  const size_t array_size = 100*1000*1000;
+  size_t ntrips = 2;
 
 #pragma omp parallel
   {
