@@ -16,7 +16,6 @@ core
 mpi-bandwidth
 mpi-bi-bandwidth
 mpi-latency
-*.clog2
-*.slog2
 perf-mystery
 numa-test
+count3s
