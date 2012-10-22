@@ -78,7 +78,8 @@ int main(int argc, const char **argv)
     int tid = omp_get_thread_num();
 
     pin_to_core(tid);
-    x = (char *) numa_alloc_local(array_size);
+    if(tid == 0)
+      x = (char *) numa_alloc_local(array_size);
 
     // {{{ single access
 #pragma omp barrier
