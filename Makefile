@@ -8,7 +8,7 @@ perf-mystery: perf-mystery.cpp
 	g++ $(DEBUG_FLAGS) -lrt -o$@ $^
 
 numa-test: numa-test.c
-	gcc -std=gnu99 -fopenmp $(DEBUG_FLAGS) -lrt -lnuma -o$@ $^
+	gcc -O3 -std=gnu99 -fopenmp $(DEBUG_FLAGS) -lrt -lnuma -o$@ $^
 
 mpi%: mpi%.c
 	mpicc -std=gnu99 $(DEBUG_FLAGS) -lrt -o$@ $^
