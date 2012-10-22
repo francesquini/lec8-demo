@@ -19,3 +19,4 @@ mpi-latency
 *.clog2
 *.slog2
 perf-mystery
+numa-test
