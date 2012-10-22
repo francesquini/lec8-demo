@@ -17,7 +17,7 @@ int main()
     array[i] = rand() % 10;
 
   int num_threads = omp_get_max_threads();
-  const int stride = 16;
+  const int stride = 1;
   volatile int sums[num_threads*stride];
 
   timestamp_type t1;
