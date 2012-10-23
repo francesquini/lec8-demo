@@ -224,7 +224,7 @@ def plot_associativity():
 
 
 if __name__ == "__main__":
-    #measure_strides()
+    measure_strides()
     measure_cache_bandwidths()
-    #find_associativity()
-    #plot_associativity()
+    find_associativity()
+    plot_associativity()
