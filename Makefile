@@ -2,6 +2,7 @@ EXECUTABLES = \
 	      mpi-bandwidth mpi-bi-bandwidth mpi-latency \
 	      pipeline-perf-mystery \
 	      pipeline-perf pipeline-perf-soln pipeline-perf-soln-o3 \
+	      fp-perf \
 	      numa-test count3s
 
 all: $(EXECUTABLES)
@@ -16,6 +17,9 @@ pipeline-perf-soln: pipeline-perf-soln.c
 	gcc -O -std=gnu99 -fopenmp $(DEBUG_FLAGS) -lrt -o$@ $^
 
 pipeline-perf-soln-o3: pipeline-perf-soln.c
+	gcc -O3 -std=gnu99 -fopenmp $(DEBUG_FLAGS) -lrt -o$@ $^
+
+fp-perf: fp-perf.c
 	gcc -O3 -std=gnu99 -fopenmp $(DEBUG_FLAGS) -lrt -o$@ $^
 
 numa-test: numa-test.c
