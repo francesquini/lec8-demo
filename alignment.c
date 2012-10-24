@@ -19,7 +19,7 @@ int main()
   if (errno = posix_memalign((void **) &b, 64, n*sizeof(float) + 64))
     perror("allocating b");
 
-  float __attribute__ ((aligned (64))) *a = (float *) (((char *) allocation));
+  float __attribute__ ((aligned (64))) *a = (float *) (((char *) allocation) + 0);
 
   /*
   puts("write");
