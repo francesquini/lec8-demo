@@ -20,3 +20,4 @@ mpi-latency
 *.slog2
 perf-mystery
 numa-test
+numa-test-grow
